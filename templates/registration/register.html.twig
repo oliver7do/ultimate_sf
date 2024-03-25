@@ -3,17 +3,33 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
-    <h1>Register</h1>
+<h1>Register</h1>
 
-    {{ form_errors(registrationForm) }}
+<div class="form-container">
+    <div class="form-container1">
+        {{ form_errors(registrationForm) }}
 
-    {{ form_start(registrationForm) }}
+        {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.nom) }}
+        {{ form_row(registrationForm.prenom) }}
         {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.phone) }}
+        {{ form_row(registrationForm.infor_perso) }}
+        {{ form_row(registrationForm.annee) }}
+        {{ form_row(registrationForm.photo) }}
+
         {{ form_row(registrationForm.plainPassword, {
-            label: 'Passwordphp bin/console make:migration'
+        label: 'Password'
         }) }}
         {{ form_row(registrationForm.agreeTerms) }}
 
         <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
+    </div>
+    <div class="form-container2">
+
+</div>
+</div>
+
+
+
 {% endblock %}

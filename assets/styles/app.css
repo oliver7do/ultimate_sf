@@ -1,8 +1,28 @@
 body {
-    background-color: #CA0025;
+
 }
 
-form input{
-    width: 100%;
-    
+.from-container {
+    background-color: #CA0025;
+    width: 1200px;
+    height: 1000px;
+}
+
+.from-container1 {
+    background-color: #CA0025;
+    width: 600px;
+    height: 500px;
+
+}
+
+.from-container2 {
+    background-color: #ffffff;
+    width: 600px;
+    height: 500px;
+
+}
+
+form input {
+    width: 20%;
+
 }

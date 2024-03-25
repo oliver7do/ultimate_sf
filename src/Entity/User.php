@@ -46,9 +46,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 255)]
     private ?string $phone = null;
 
-    #[ORM\ManyToOne(inversedBy: 'users')]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?Commande $Commande = null;
+    #[ORM\Column(length: 255)]
+    private ?string $prenom = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $annee = null;
 
     public function getId(): ?int
     {
@@ -169,19 +171,30 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setPhone(string $phone): static
     {
         $this->phone = $phone;
+        return $this;
+    }
+
+    public function getPrenom(): ?string
+    {
+        return $this->prenom;
+    }
+
+    public function setPrenom(string $prenom): static
+    {
+        $this->prenom = $prenom;
 
         return $this;
     }
 
-    public function getCommande(): ?Commande
+    public function getAnnee(): ?string
     {
-        return $this->Commande;
+        return $this->annee;
     }
 
-    public function setCommande(?Commande $Commande): static
+    public function setAnnee(string $annee): static
     {
-        $this->Commande = $Commande;
+        $this->annee = $annee;
 
         return $this;
-    }
+    }  
 }
