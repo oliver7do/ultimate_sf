@@ -1,22 +1,23 @@
 body {
-
+    background-color: #CA0025;
 }
 
-.from-container {
+.form-container {
     background-color: #CA0025;
     width: 1200px;
     height: 1000px;
+    display: flex;
 }
 
-.from-container1 {
-    background-color: #CA0025;
+.form-container1 {
+    background-color: #00ca36;
     width: 600px;
     height: 500px;
 
 }
 
-.from-container2 {
-    background-color: #ffffff;
+.form-container2 {
+    background-color: #ece4e5;
     width: 600px;
     height: 500px;
 
